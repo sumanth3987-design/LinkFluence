@@ -1,0 +1,330 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #faf9f7;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f1ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9d2ec;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c6b9ee;
+}
+
+/* Linkfluence authentication screen */
+.lf-auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 18px;
+  background:
+    radial-gradient(ellipse at top left, rgba(118, 87, 237, 0.10), transparent 42%),
+    #faf9f7;
+  color: #24232b;
+}
+
+.lf-auth-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 32px;
+  border: 1px solid #ece9e5;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 18px 55px rgba(36, 35, 43, 0.07);
+}
+
+.lf-auth-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  border: 0;
+  background: transparent;
+  color: #77747e;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.lf-auth-back:hover {
+  color: #6745e8;
+}
+
+.lf-auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.lf-auth-logo {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #6745e8;
+  color: #fff;
+}
+
+.lf-auth-card h1 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+
+.lf-auth-subtitle {
+  margin: 8px 0 24px;
+  color: #77747e;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.lf-auth-roles,
+.lf-auth-mode {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 18px;
+  padding: 5px;
+  border-radius: 13px;
+  background: #f6f4f2;
+}
+
+.lf-auth-roles button,
+.lf-auth-mode button {
+  min-height: 38px;
+  padding: 8px 5px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #77747e;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lf-auth-roles button.active,
+.lf-auth-mode button.active {
+  background: #fff;
+  color: #6745e8;
+  box-shadow: 0 1px 4px rgba(36, 35, 43, 0.08);
+}
+
+.lf-auth-mode {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lf-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lf-auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #393640;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.lf-auth-form input {
+  width: 100%;
+  min-width: 0;
+  height: 45px;
+  padding: 0 13px;
+  border: 1px solid #e5e1e9;
+  border-radius: 11px;
+  outline: none;
+  background: #fff;
+  color: #24232b;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.lf-auth-form input:focus {
+  border-color: #8a6cf4;
+  box-shadow: 0 0 0 3px rgba(103, 69, 232, 0.10);
+}
+
+.lf-auth-form input::placeholder {
+  color: #aaa6b0;
+}
+
+.lf-auth-password {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e1e9;
+  border-radius: 11px;
+}
+
+.lf-auth-password:focus-within {
+  border-color: #8a6cf4;
+  box-shadow: 0 0 0 3px rgba(103, 69, 232, 0.10);
+}
+
+.lf-auth-password input {
+  border: 0;
+  box-shadow: none;
+}
+
+.lf-auth-password input:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+.lf-auth-password > button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background: transparent;
+  color: #8a8790;
+  cursor: pointer;
+}
+
+.lf-auth-submit,
+.lf-auth-google-button {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.lf-auth-submit {
+  margin-top: 3px;
+  background: #6745e8;
+  color: #fff;
+}
+
+.lf-auth-submit:hover:not(:disabled) {
+  background: #5736d5;
+}
+
+.lf-auth-submit:disabled,
+.lf-auth-google-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.lf-auth-error {
+  margin: 0;
+  padding: 11px 12px;
+  border: 1px solid #f4caca;
+  border-radius: 10px;
+  background: #fff4f4;
+  color: #a52828;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.lf-auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 15px;
+  color: #98939e;
+  font-size: 11px;
+}
+
+.lf-auth-divider::before,
+.lf-auth-divider::after {
+  height: 1px;
+  flex: 1;
+  background: #ece9e5;
+  content: '';
+}
+
+.lf-auth-google-button {
+  border: 1px solid #e5e1e9;
+  background: #fff;
+  color: #393640;
+}
+
+.lf-auth-google-button:hover:not(:disabled) {
+  background: #faf9f7;
+}
+
+.lf-auth-google-g {
+  font-size: 17px;
+  font-weight: 800;
+  color: #4285f4;
+}
+
+.lf-auth-google-note,
+.lf-auth-admin-note {
+  color: #77747e;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.lf-auth-admin-note {
+  margin: 20px 0 0;
+}
+
+.lf-auth-spinner {
+  animation: lf-auth-spin 1s linear infinite;
+}
+
+@keyframes lf-auth-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .lf-auth-card {
+    padding: 23px 18px;
+    border-radius: 18px;
+  }
+
+  .lf-auth-card h1 {
+    font-size: 24px;
+  }
+
+  .lf-auth-roles button {
+    font-size: 11px;
+  }
+}
+
